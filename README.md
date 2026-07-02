@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+AMAKOPPAR Bank — Frontend React
+SAMAKOPPAR Bank est une application bancaire web développée avec React et connectée à une API REST Spring Boot sécurisée par JWT. Elle permet à un utilisateur de s'inscrire, se connecter, consulter ses comptes bancaires, effectuer des transactions (dépôts, retraits, virements) et suivre l'historique de ses opérations.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies utilisées
+React (framework frontend)
+Tailwind CSS (design et mise en page)
+Axios (communication avec l'API)
+React Router DOM (navigation entre les pages)
+JWT (authentification sécurisée)
+LocalStorage (persistance de la session)
+Prérequis
+Node.js version 18 ou supérieur
+Le backend Spring Boot doit être lancé sur http://localhost:8080
+Voir le repo backend : https://github.com/Momar-dev/SAMAKOPPAR-Bank---Backend-Spring-Boot-complet
+Installation et lancement
+Cloner le projet :
 
-## Available Scripts
 
-In the project directory, you can run:
+git clone https://github.com/Momar-dev/samakoppar-frontend.git
+cd samakoppar-frontend
+Installer les dépendances :
 
-### `npm start`
+npm install
+Lancer l'application :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm start
+L'application sera disponible sur http://localhost:3000
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Fonctionnalités
+Authentification
 
-### `npm test`
+Inscription avec validation des données
+Connexion sécurisée avec token JWT
+Déconnexion et suppression automatique du token
+Protection des routes privées (redirection si non connecté)
+Gestion des comptes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Affichage de tous les comptes bancaires de l'utilisateur
+Solde en temps réel de chaque compte
+Comptes de type Courant, Épargne, etc.
+Transactions
 
-### `npm run build`
+Dépôt d'argent sur un compte
+Retrait depuis un compte
+Virement entre deux comptes
+Historique complet des transactions avec date, type et montant
+Tableau de bord
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Solde total consolidé de tous les comptes
+Résumé des dernières transactions
+Vue d'ensemble des comptes actifs
+Structure du projet
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+samakoppar-frontend/
+├── src/
+│   ├── components/
+│   │   ├── Sidebar.jsx
+│   │   ├── Navbar.jsx
+│   │   └── PrivateRoute.jsx
+│   ├── context/
+│   │   └── AuthContext.js
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Accounts.jsx
+│   │   ├── Transactions.jsx
+│   │   └── NotFound.jsx
+│   ├── services/
+│   │   └── api.js
+│   ├── App.js
+│   └── index.js
+Backend
+Ce frontend fonctionne avec une API REST développée en Spring Boot.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Repo backend : https://github.com/Momar-dev/SAMAKOPPAR-Bank---Backend-Spring-Boot-complet
 
-### `npm run eject`
+Stack backend : Java 17, Spring Boot 3, Spring Security, JWT, MySQL, Maven
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Auteur
+Momar DIOP — Développeur Full-Stack Junior
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Portfolio : https://momar-dev.netlify.app
+LinkedIn : https://www.linkedin.com/in/momar-diop/
+GitHub : https://github.com/Momar-dev
+Licence
+Ce projet est sous licence MIT.
