@@ -1,4 +1,4 @@
-AMAKOPPAR Bank — Frontend React
+SAMAKOPPAR Bank — Frontend React
 SAMAKOPPAR Bank est une application bancaire web développée avec React et connectée à une API REST Spring Boot sécurisée par JWT. Elle permet à un utilisateur de s'inscrire, se connecter, consulter ses comptes bancaires, effectuer des transactions (dépôts, retraits, virements) et suivre l'historique de ses opérations.
 
 Technologies utilisées
